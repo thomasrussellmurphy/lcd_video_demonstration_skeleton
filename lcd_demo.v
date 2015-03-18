@@ -51,6 +51,8 @@ assign GPIO1_D [ 31: 28 ] = 4'hz;
 assign GPIO1_D[ 27: 0 ] = { disp_vsync, disp_hsync, disp_en, disp_clk, disp_blue, disp_green, disp_red };
 assign disp_en = pll_lock; // Enable the display just after PLL has locked
 
+// Operation of system:
+// Set SW[0] low, program device, set SW[0] high.
 assign en_switch = SW[ 0 ];
 
 // =======================================================
